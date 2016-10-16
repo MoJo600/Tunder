@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Tunder</string>
+    <string name="app_name">Tuneder</string>
+    <string name="loc">Your are located around: </string>
+    <string name="latText">Latitude: </string>
+    <string name="longitText">Longitude: </string>
+    <string name="lat"> </string>
+    <string name="longit"> </string>
+    <string name="share">Wanna share awesome music with world? Upload your music and everyone
+    in your location can hear it!</string>
 </resources>

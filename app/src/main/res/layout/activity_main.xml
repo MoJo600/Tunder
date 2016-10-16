@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -11,4 +12,107 @@
     tools:context="myapp.com.tunder.MainActivity">
 
 
+    <TextView
+        android:text="@string/loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:id="@+id/location"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/welcome"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/latText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location"
+        android:layout_alignStart="@+id/location"
+        android:layout_marginTop="40dp"
+        android:id="@+id/lat"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="@string/longitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lat"
+        android:layout_alignStart="@+id/lat"
+        android:layout_marginTop="18dp"
+        android:id="@+id/longit"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="@string/lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/latitude"
+        android:layout_marginEnd="27dp"
+        android:textSize="24sp"
+        android:layout_alignTop="@+id/lat"
+        android:layout_alignEnd="@+id/welcome"
+        android:textColor="@android:color/holo_purple" />
+
+    <TextView
+        android:text="@string/longit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/longitude"
+        android:textSize="24sp"
+        android:textColor="@android:color/holo_purple"
+        android:layout_below="@+id/latitude"
+        android:layout_alignEnd="@+id/latitude" />
+
+    <TextView
+        android:text="Welcome to Tuneder!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:textColor="?attr/colorPrimaryDark"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/lat"
+        android:layout_marginTop="22dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo2"
+        android:id="@+id/imageView"
+        android:layout_marginBottom="45dp"
+        android:layout_above="@+id/lat"
+        android:layout_toStartOf="@+id/welcome"
+        android:layout_marginEnd="18dp" />
+
+    <TextView
+        android:text="@string/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/share"
+        android:textSize="27sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/longit"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Upload music!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:textSize="18sp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/share"
+        android:layout_toStartOf="@+id/explore" />
+
+    <Button
+        android:text="Explore! "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/explore"
+        android:textSize="24sp"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toStartOf="@+id/longitude" />
 </RelativeLayout>

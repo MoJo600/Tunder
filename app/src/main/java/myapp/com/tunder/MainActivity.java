@@ -13,9 +13,12 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.R.attr.data;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,14 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
+        final TextView lat = (TextView) findViewById(R.id.latitude);
+        final TextView longit = (TextView) findViewById(R.id.longitude);
 
         Gps mygp= new Gps(c);
 
-        Toast.makeText(c, "Latitude is: "+Double.toString(mygp.getLocation().getLatitude()) + " \nLongitude is: " +
-                        Double.toString(mygp.getLocation().getLongitude()),
-                Toast.LENGTH_LONG).show();
-
-
+        lat.setText(Integer.toString((int)mygp.getLocation().getLatitude()));
+        longit.setText(Integer.toString((int)mygp.getLocation().getLongitude()));
 
 
     }
